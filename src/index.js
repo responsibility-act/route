@@ -1,5 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import HelloWorld from "./components/HelloWord";
+import CRouter from "./routes";
+import { Provider } from "react-redux";
 
-ReactDOM.render(<HelloWorld />, document.getElementById("root"));
+import store from "./store";
+
+ReactDOM.render(
+  <Provider store={store}>
+    <CRouter store={store} />
+  </Provider>,
+  document.getElementById("root")
+);

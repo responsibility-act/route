@@ -16,6 +16,15 @@ module.exports = {
     extensions: [".js", ".jsx"],
     alias: {}
   },
+  /*
+  plugins: [
+    new webpack.DefinePlugin({
+      "process.env": {
+        NODE_ENV: JSON.stringify("development")
+      }
+    })
+  ],
+  */
   module: {
     rules: [
       {

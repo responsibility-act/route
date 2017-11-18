@@ -22,6 +22,11 @@ func main() {
 	app.Logger().SetLevel("debug")
 
 	app.Controller("/", new(controllers.MainController))
+	app.Controller("/company", new(controllers.CompanyController))
+	app.Controller("/position", new(controllers.PositionController))
+	app.Controller("/folder", new(controllers.FolderController))
+	app.Controller("/candidate", new(controllers.CandidateController))
+	app.Controller("/task", new(controllers.TaskController))
 
 	app.Run(iris.Addr(":8088"))
 }
