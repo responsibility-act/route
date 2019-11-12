@@ -1,13 +1,13 @@
 package controllers
 
-import "github.com/kataras/iris/mvc"
+import "github.com/kataras/iris/v12/mvc"
 
-type TaskController struct {
-	mvc.C
+type TaskController struct{}
+
+var taskView = mvc.View{
+	Name: "layout.html",
 }
 
 func (c *TaskController) Get() mvc.Result {
-	return mvc.View{
-		Name: "layout.html",
-	}
+	return taskView
 }

@@ -1,13 +1,13 @@
 package controllers
 
-import "github.com/kataras/iris/mvc"
+import "github.com/kataras/iris/v12/mvc"
 
-type MainController struct {
-	mvc.C
+type MainController struct{}
+
+var mainView = mvc.View{
+	Name: "layout.html",
 }
 
 func (c *MainController) Get() mvc.Result {
-	return mvc.View{
-		Name: "layout.html",
-	}
+	return mainView
 }
